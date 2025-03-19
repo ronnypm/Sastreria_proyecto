@@ -1,0 +1,21 @@
+1. Ingreso de Datos del Cliente:
+Nombre: (Obligatorio)
+Apellido: (Opcional)
+Número de teléfono: (Opcional)
+2. Ingreso de Datos de la Prenda:
+Tipo de prenda: (Ejemplo: jean, polo, short, etc.)
+Tipo de servicio: (Opciones dinámicas según la prenda seleccionada. Ejemplo: si elige "jean", las opciones podrían ser "subir basta", "entalle de cintura", etc.)
+Cantidad de prendas: Número de unidades de esa prenda específica.
+3. Agregar Prenda a la Tabla:
+Botón para agregar la prenda ingresada a una tabla.
+4. Tabla de Prendas Agregadas:
+Cada fila de la tabla debe mostrar:
+
+Tipo de prenda
+Servicio seleccionado
+Cantidad
+Precio
+Opciones de modificación/eliminación
+5. Funcionalidades de la Tabla:
+Eliminar una prenda completa: Si el cliente decide no dejar la prenda, debe haber un botón para eliminar toda la fila de la tabla.
+Reducir la cantidad de una prenda: Si el cliente inicialmente agregó varias unidades de la misma prenda pero luego decide dejar menos, debe haber una opción para restar la cantidad en la fila correspondiente sin eliminar toda la prenda.

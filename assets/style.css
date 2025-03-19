@@ -1,0 +1,311 @@
+*{
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif; 
+    margin: 0;
+    padding: 0;
+  
+}
+:root{
+    --primary-color : #707070;
+    --heading-color : #343F52;
+    --paragraph-color : #60697B;
+    --white : #ffffff; 
+}
+
+body{
+   
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* padding: 20px ; */
+    justify-content: flex-start;
+}
+
+
+/*******************
+
+
+***************/
+
+#header {
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #a88ddf  ; */
+    padding: 5px 70px ;
+    border-bottom:  1px solid #a88ddf ;
+
+}
+
+.logo h1{
+
+    color: black;
+    font-size: 3rem;
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+
+nav.menu ul{
+    list-style: none;
+    display: flex;
+}
+
+nav.menu ul li{
+    margin-left: 30px;
+}
+
+
+nav.menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+li{
+    padding: 15px;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+li:hover{
+    background-color: #a88ddf;
+    cursor: pointer;
+    color: var(--primary-color);
+
+}
+
+
+
+/**************
+
+
+***************/
+
+
+.container{
+    /* background:chocolate; */
+    /* border-radius: 8px; */
+    max-width: 1000px;
+    position: relative;
+    padding: 25px;
+    width: 100%;
+
+
+    /** agregado para la tabla***/
+
+    Flex-grow: 1; /* Permite que el formulario ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container h1{
+    font-size: 2rem;
+    color: var(--paragraph-color);
+    font-weight: 500;
+    text-align: center;
+}
+
+.container .form{
+    /* background-color: #900C3F; */
+    margin-top: 20px;
+}
+
+.form .input_box{
+    /* background:#900C3F ; */
+    margin-top: 20px;
+    width: 100%;
+}
+
+.input_box label{
+    color: black;
+}
+
+.form :where(.input_box input, .selec_box ){
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0 15px;
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+
+.column{
+    display: flex;
+    column-gap: 15px;
+
+}
+
+.container h2{
+    color: var(--paragraph-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.selec_box select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: var(--paragraph-color);
+    font-size: 1rem;
+}
+
+.selec_box input{
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    color: var(--paragraph-color);
+    text-align: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+/*Boton*/
+.selec_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.selec_button button{
+    height: 100%;
+    width: 20%;
+    text-align: center;
+    border-radius: 25px;
+    padding: 15px;
+    /* outline: none; */
+    border: none;
+    color: #ffffff;
+    background: #a88ddf;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.selec_button button:hover{
+    background: #825dcc;
+    
+}
+
+button:active {
+    transform: scale(0.95); /* Reduce ligeramente el tamaño */
+    /* background-color: darkblue; */
+}
+
+/* Evita que pierda el foco después de hacer clic */
+button:focus {
+    outline: none;
+}
+
+
+
+
+/*tabla*/
+
+.tabla-container {
+    width: 100%;
+    margin-top: auto; /* Empuja la tabla hacia abajo */
+}
+
+
+.tabla{
+    margin-top: 15px;
+    /* border: solid 1px var(--heading-color); */
+}
+
+table{
+    color: var(--heading-color);
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    max-width: 1000px;
+    
+}
+
+
+thead{
+    background:#a88ddf  ;
+    
+    
+}
+
+th{
+    padding: 9px;
+    color:black;
+    font-weight: 500; 
+}
+
+td{
+    padding:6px;
+    text-align: center;
+    border-bottom: solid 1px #a88ddf  ;
+}
+
+tbody tr{
+    cursor: pointer;
+    
+}
+
+tbody tr td input{
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--paragraph-color);
+}
+
+tbody tr:hover{
+    background: #d3ccd6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .form .column .tabla{
+        flex-wrap:Wrap;
+    } 
+}
+
+
+
+
+
+
+/* a, b, c, d, e, f, g, h, i, j, k, l, m, n, ñ, o, p, q, r, s, t, u, v, w, x, y, z.  */

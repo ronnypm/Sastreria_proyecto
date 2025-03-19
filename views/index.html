@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" sizes="192x192" href="../assets/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="../assets/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assests/">
+    <link rel="manifest" href="../assets/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title>Sastreria Itham</title>
+</head>
+
+<body>
+ 
+    <div id="header"></div>
+
+
+    <!-- <div class="titulo">
+        <h1>Agregar cliente</h1>
+    </div> -->
+
+    <section class="container">
+        <form action="#" method="post" class="form">
+            <h1>Registro De Clientes y Prendas</h1>
+            <div class="column">
+                <div class="input_box">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="ingrese nombre" required>
+                </div>
+                <div class="input_box">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="ingrese apellido">
+                </div>
+                <div class="input_box">
+                    <label for="celular">Celular</label>
+                    <input type="tel" id="celular" name="celular" pattern="\d{9}" placeholder="ingrese numero celular">
+                </div>
+            </div>
+            <h2>Tipo De Prenda y Servicio</h2>
+            <div class="column">
+                <div class="selec_box">
+                    <select name="option" id="prenda">
+                        <option value="" selected disabled>Seleccione una prenda</option>
+                        <option value="jean">Pantalon Jean</option>
+                        <option value="pantalon_vestir">Pantalon De vestir</option>
+                        <option value="polo">Polo</option>
+                        <option value="short">short</option>
+                        <option value="camisa">Camisa</option>
+                    </select>
+                </div>
+                <div class="selec_box">
+                    <select name="option" id="opcion" disabled>
+                        <option value="" selected disabled>Seleccione una opción</option>
+                    </select>
+                </div>
+                <div class="selec_box" >
+                    <input type="number" value="1" min="1" placeholder="Cantidad">
+                </div>
+                <div class="selec_box" >
+                    <input type="text" id="precio_unitario" readonly placeholder="Precio">
+                </div>
+            </div>
+            <div class="selec_button" >
+                <button type="button" onclick="agregarFila()">Agregar prenda</button>
+            </div>
+            <h2>Lista de prendas</h2>
+            <div class="tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Prenda</th>
+                            <th>Servicio</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                            <th>Gestion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <h2>Resumen de pago</h2>
+            <div class="column">
+                <div class="selec_box">
+                    <input type="text" name="total_general" id="total" placeholder="total">
+                </div>
+                <div class="selec_box">
+                    <input type="number" name="adelanto" id="adelanto" placeholder="adelanto">
+                </div>
+                <div class="selec_box">
+                    <input type="text" name="resta" id="resta" placeholder="resta">
+                </div>
+            </div>
+            
+        </form>
+    </section>
+    <footer>
+        <!-- mi nombre cuando termines  -->
+    </footer>
+
+    <script src="../js/scrip.js"></script>
+    <script>
+        fetch("header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+    </script>
+    <script src="../js/exportarDatos.js"></script>
+</body>
+
+</html>
